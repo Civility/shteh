@@ -1,0 +1,18 @@
+{
+  "name": "project",
+  "description": "first",
+  "main": "index.js",
+  "authors": [
+    "Civility <civilitys@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

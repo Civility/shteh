@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&subset=cyrillic');
+p,a , ul, label, input {
+	font-weight: 400;
+}
+body {
+  position: relative;
+}
+nav {
+	position: fixed;
+	z-index: 2;
+	height: 100%;
+	box-shadow: 0 0 2rem rgba(0,0,0,.3);
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 0 4rem 4rem 0;
+	height: 50%;
+	top: 25%;
+	font-size: 2rem;
+	a {
+		color: #000000;
+		margin: auto;
+		&.active:not(:first-child) {
+			color: $red;
+		}
+		&.active:first-child{
+			color: #ffffff;
+		}
+	}
+}
+
+
+.red{
+	background-color: $red;
+}
+.btn{
+	font-size: 1.5rem;
+}
+.grey{background-color: #efefef;}
+#validate_Check{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-top: 0.5rem;
+}
+@include media-breakpoint-down(sm) {
+	h1{
+		font-size: 1.7rem;
+		line-height: 1.2;
+		font-weight: 700;
+	}
+	h2{
+		font-size: 3rem;
+		line-height: 1.2;
+		font-weight: 500;
+	}
+	h3{
+		font-size: 2.5rem;
+		line-height: 1.2;
+		font-weight: 500;
+	}
+	p, ul{
+		font-size: 1.4rem;
+	}
+}
+@include media-breakpoint-up(md) {
+	h1{
+		font-size: 2rem;
+		line-height: 1.2;
+		font-weight: 500;
+	}
+	h2{
+		font-size: 3.2rem;
+		line-height: 1.2;
+		font-weight: 500;	
+		}
+	h3{
+		font-size: 2.8rem;
+		line-height: 1.2;
+		font-weight: 500;	
+	}
+	p, ul{
+		font-size: 1.5rem;
+	}	
+}
+@include media-breakpoint-up(lg) {
+	h1{
+		font-size: 2.5rem;
+		line-height: 1.2;
+		font-weight: 700;	
+	}
+	h2{
+		font-size: 4.5rem;
+		line-height: 1.2;
+		font-weight: 700;
+	}
+	h3{
+		font-size: 3.5rem;
+		line-height: 1.2;
+		font-weight: 700;	
+	}
+	p, ul{
+		font-size: 1.7rem;
+	}	
+}

@@ -1,0 +1,38 @@
+section.mt-5.py-5.grey#form
+	.contact-form
+		.container
+			.col-sm-.col-md-.col-lg-.col-xl-
+				h3.text-center Отправить запрос
+			form.py-5.h3.font-weight-light#form
+				.row
+					.col.d-none
+						input(type="hidden" name="project_name" value="Shteh")
+						input(type="hidden" name="admin_email" value="victor.erofeev@utsrus.com")
+						input(type="hidden" name="form_subject" value="Форма связи")
+					.col-12.right
+						.form-group.py-3
+							label(for='validate_message') Сообщение
+							textarea.form-control.form-control-lg.md-textarea#validate_message(min="50" max="250" maxlength="250" value='' name='messages' rows='3' required )
+						.row
+							.col-lg-6.col-md-12
+								label(for='validate_name') Имя
+								input.form-control.form-control-lg#validate_name(maxlength="32" value='' type='text'  placeholder='Ваше Имя' name='name' pattern="^([А-ЯA-Z]|[А-ЯA-Z][\x27а-яa-z]{1,}|[А-ЯA-Z][\x27а-яa-z]{1,}\-([А-ЯA-Z][\x27а-яa-z]{1,}|(оглы)|(кызы)))\040[А-ЯA-Z][\x27а-яa-z]{1,}(\040[А-ЯA-Z][\x27а-яa-z]{1,})?$" required )
+							.col-lg-6.col-md-12
+								label(for='validate_name') Компания
+								input.form-control.form-control-lg#validate_name(maxlength="32" value='' type='text' pattern="^([А-ЯA-Z]|[А-ЯA-Z][\x27а-яa-z]{1,}|[А-ЯA-Z][\x27а-яa-z]{1,}\-([А-ЯA-Z][\x27а-яa-z]{1,}|(оглы)|(кызы)))\040[А-ЯA-Z][\x27а-яa-z]{1,}(\040[А-ЯA-Z][\x27а-яa-z]{1,})?$" placeholder='Наименование' name='firm' required)
+						.row.mt-5
+							.col-lg-6.col-md-12
+								label(for='validate_email') Email
+								input.form-control.form-control-lg#validate_email(maxlength="32" value='' type='email' placeholder='Ваш Email' name='email' pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required)
+							.col-lg-6.col-md-12
+								label(for='validate_phone') Телефон
+								input.form-control.form-control-lg#validate_phone(maxlength="18" value='' type='tel' placeholder='Ваш Телефон' name='tel' pattern='^(\+?\d[- .]*){7,13}' required)
+						.form-check.my-5
+							.row.align-items-center
+								.col-lg-6.col-md-12
+									input.form-check-input#validate_Check.mr-2(type='checkbox' value='' required)
+									input.form-check-input.d-none(type='checkbox' name='spam')
+									label.form-check-label.ml-2(for='validate_Check') Я даю согласие на обработку персональных данных
+								.col-lg-6.col-md-12
+									.mt-3.g-recaptcha(data-sitekey="6LdOMlEUAAAAAJJzFhWGL2YRPXZYre7zm3Q7aNgV")
+							button.my-5.btn-block.btn.red.text-white#send(value='Отправить' type="submit" name="send" required) Отправить

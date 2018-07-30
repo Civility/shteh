@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+libs
+Desktop.ini
+bower_components
+node_modules
+dist
+.git
